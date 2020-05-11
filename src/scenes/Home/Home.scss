@@ -1,0 +1,56 @@
+@import "../../Scss/variables.scss";
+
+.landing {
+  position: relative;
+  background: url('../../assets/img/water.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  .access__container {
+    position: relative;
+    display: block;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 20px;
+    min-width: 280px;
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .access__logo {
+    text-align: center;
+  }
+
+  .access_inputs {
+    text-align: left;
+    font-family: $outstanding;
+
+    h4 {
+      margin: 40px 0 0;
+      color: $text;
+      font-size: 18px;
+    }
+  }
+
+  .access__button {
+    margin-top: 20px;
+    width: 100%;
+
+    .MuiButton-contained {
+      width: 100%;
+
+      &:hover {
+        background-color: $hover;
+      }
+    }
+
+    .MuiButton-label a {
+      color: $white;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: $outstanding;
+    }
+  }
+}

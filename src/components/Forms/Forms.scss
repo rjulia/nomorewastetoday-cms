@@ -1,0 +1,102 @@
+@import '../../Scss/variables.scss';
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 5px 10px;
+
+  .form__title {
+    color: $primary;
+    font-family: $outstanding;
+    margin: 15px 10px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 1px solid $secondary;
+  }
+
+  .rc-md-editor .editor-container .sec-md,
+  .rc-md-editor .editor-container .sec-html {
+    min-height: 200px;
+  }
+
+  .form__box {
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .form__input--box {
+    flex: 1 1 33%;
+    padding: 0 10px;
+    display: flex;
+
+    .form__label {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    &.newness {
+      flex: 1 1 100%;
+
+      .MuiSwitch-colorSecondary.Mui-checked {
+        color: $primary;
+      }
+    }
+
+    .form_imput--boximage {
+      flex: 1 1 33%;
+    }
+
+    .form_imput--boxotherinputs {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form__input--box {
+        flex: 1 1 50%;
+
+        &.large {
+          flex: 1 1 100%;
+        }
+
+        &.medium {
+          flex: 1 1 75%;
+        }
+
+        &.short {
+          flex: 1 1 25%;
+        }
+
+        &.m-15 {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    >div {
+      width: 100%;
+    }
+
+    .form__input--select {
+      margin-top: 16px;
+    }
+  }
+
+  .form__buttons {
+    padding: 10px;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+
+  .form__image {
+    width: 150px;
+  }
+
+  .rc-md-editor {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,19 @@
+@import "./scss/normalize.scss";
+@import "./scss/variables.scss";
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import './scss/paper-dashboard.scss';
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.app-cms {
+  padding: 0;
+}

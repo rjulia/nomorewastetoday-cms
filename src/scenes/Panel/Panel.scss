@@ -1,0 +1,25 @@
+@import '../../Scss/variables.scss';
+
+.material-icons {
+  cursor: pointer;
+}
+
+.createclient__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.MuiPaper-root {
+  .MuiToolbar-root {
+    padding-left: 15px;
+  }
+
+  .MuiTypography-h6 {
+    color: $primary;
+    font-family: $outstanding;
+    margin: 10px 0;
+    font-size: 1.714em;
+    font-weight: 700;
+  }
+}

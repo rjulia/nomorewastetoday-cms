@@ -1,0 +1,26 @@
+@import "../../Scss/variables.scss";
+
+.logo {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: 576px) {
+    max-width: 200px;
+  }
+
+  .logo__line--one {
+    fill: $black
+  }
+
+  .logo__line--two {
+    fill: none;
+    stroke: $black;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+
+  .logo__line--three {
+    fill: $secondary;
+  }
+}

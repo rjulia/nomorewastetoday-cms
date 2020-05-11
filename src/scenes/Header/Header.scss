@@ -1,0 +1,46 @@
+@import "../../Scss/variables.scss";
+
+.navbar__main {
+  margin-bottom: 0;
+  height: 60px;
+  background-color: transparent;
+  position: fixed;
+  top: 8px;
+  z-index: $Zmenu;
+  width: 100%;
+  justify-content: right;
+  text-align: right;
+  padding: 8px 16px 8px;
+
+
+  .navbar__main--button {
+    width: 100%;
+  }
+
+  .navbar__main--dialog {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625 rem;
+
+    .navbar__main--message {
+      color: $white;
+      font-size: 18px;
+      font-weight: 300;
+      font-family: $general;
+    }
+
+    .MuiButton-contained {
+      max-height: 40px;
+      color: $white;
+    }
+  }
+
+  .navbar-brand {
+    margin: 0;
+
+    h2 {
+      color: $white
+    }
+  }
+}
