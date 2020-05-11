@@ -22,7 +22,7 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
-const Uploadlink = createUploadLink({ uri: '/graphql' });
+const Uploadlink = createUploadLink({ uri: process.env.REACT_APP_LINK_API || '/graphql' });
 
 export const client = new ApolloClient({
   link: authLink.concat(Uploadlink),
