@@ -69,7 +69,6 @@ const PanelProducts = (props) => {
           if (error) return `Error: ${error.message}`;
           const products = data.getProducts;
           if (products.length === 0) return <CreateLink />;
-          console.log(products);
           return (
             <Mutation mutation={DELETE_PRODUCT}>
               {(deleteLocation) => (

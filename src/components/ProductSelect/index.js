@@ -43,7 +43,6 @@ const ProductSelect = ({ onHandleProducts, client, productsSelect, edit }) => {
     }
   }, [products, productsSelect, edit]);
 
-  console.log(productsAreSelect);
   return (
     <>
       <div className="form__input--box">

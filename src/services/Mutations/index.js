@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export const NEW_CLIENT = gql`
   mutation setClient($input: ClientInput) {
@@ -137,6 +137,7 @@ export const NEW_EVENT = gql`
       facebook
       category
       recomendations
+      stateEvent
     }
   }
 `;
@@ -165,6 +166,7 @@ export const UPDATE_EVENT = gql`
       category
       facebook
       recomendations
+      stateEvent
     }
   }
 `;
@@ -239,25 +241,25 @@ export const NEW_ADVICE = gql`
         text
       }
       contentWhy__zh {
-            html
-            text
-          }
+        html
+        text
+      }
       contentWhat__en {
-            html
-            text
-          }
+        html
+        text
+      }
       contentWhat__zh {
-            html
-            text
-          }
+        html
+        text
+      }
       contentHow__en {
-            html
-            text
-          }
+        html
+        text
+      }
       contentHow__zh {
-            html
-            text
-          }
+        html
+        text
+      }
       imageUrlWhy
       authorWhy
       linkWhy
@@ -292,25 +294,25 @@ export const UPDATE_ADVICE = gql`
         text
       }
       contentWhy__zh {
-            html
-            text
-          }
+        html
+        text
+      }
       contentWhat__en {
-            html
-            text
-          }
+        html
+        text
+      }
       contentWhat__zh {
-            html
-            text
-          }
+        html
+        text
+      }
       contentHow__en {
-            html
-            text
-          }
+        html
+        text
+      }
       contentHow__zh {
-            html
-            text
-          }
+        html
+        text
+      }
       imageUrlWhy
       authorWhy
       linkWhy
@@ -324,8 +326,6 @@ export const UPDATE_ADVICE = gql`
     }
   }
 `;
-
-
 
 // Products
 export const NEW_PRODUCT = gql`
@@ -345,14 +345,11 @@ export const NEW_PRODUCT = gql`
   }
 `;
 
-
-
 export const DELETE_PRODUCT = gql`
   mutation deleteProduct($id: ID!) {
     deleteProduct(id: $id)
   }
 `;
-
 
 export const UPDATE_PRODUCT = gql`
   mutation uploadProduct($input: ProductInput) {
@@ -372,25 +369,24 @@ export const UPDATE_PRODUCT = gql`
   }
 `;
 
-
-//Oders 
+//Oders
 
 export const NEW_ORDER = gql`
-  mutation setOrders($input: OrderInput){
-    setOrders(input: $input){
+  mutation setOrders($input: OrderInput) {
+    setOrders(input: $input) {
       id
     }
   }
 `;
 
 export const UPDATE_ORDERS = gql`
-  mutation updateOrders($input: OrderInput){
-    updateOrders(input: $input){
+  mutation updateOrders($input: OrderInput) {
+    updateOrders(input: $input) {
       id
       date
       total
       state
-      order{
+      order {
         id
         quantity
       }
@@ -400,28 +396,26 @@ export const UPDATE_ORDERS = gql`
 // Users
 
 export const CREATE_USER = gql`
-  mutation createUser($user: String!, $name: String!, $rol: String!, $password: String!){
+  mutation createUser($user: String!, $name: String!, $rol: String!, $password: String!) {
     createUser(user: $user, name: $name, rol: $rol, password: $password)
   }
 `;
 
-
 export const AUTH_USER = gql`
-  mutation authUser($user: String!, $password: String!){
-    authUser(user: $user, password: $password){
+  mutation authUser($user: String!, $password: String!) {
+    authUser(user: $user, password: $password) {
       token
     }
   }
 `;
 
-
 // update filr
 
 export const UPLOAD_FILE = gql`
-mutation singleUpload($file: Upload!) {
-  singleUpload(file: $file) {
-    path
-    filename
+  mutation singleUpload($file: Upload!) {
+    singleUpload(file: $file) {
+      path
+      filename
+    }
   }
-}
-`
+`;

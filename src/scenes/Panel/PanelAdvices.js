@@ -68,7 +68,6 @@ const PanelAdvices = (props) => {
           if (error) return `Error: ${error.message}`;
 
           const advices = data.getAdvices;
-          console.log(data);
           if (advices.length === 0) return <CreateLink />;
 
           return (

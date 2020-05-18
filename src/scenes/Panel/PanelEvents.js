@@ -80,6 +80,7 @@ const PanelEvents = (props) => {
                     { title: 'Title', field: 'title' },
                     { title: 'Date', field: 'date', type: 'date' },
                     { title: 'Category', field: 'category' },
+                    { title: 'State', field: 'stateEvent' },
                   ]}
                   data={events}
                   options={{

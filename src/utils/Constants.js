@@ -35,16 +35,16 @@ export const DistrictHK = [
   'NORTH',
   'TAI_PO',
   'SHA_TIN',
-  'SAI_KUNG'
-]
+  'SAI_KUNG',
+];
 
 export const TypeOfCoollection = [
   'COMMUNITY',
   'COLLECTOR',
   'ORGANIZATIONS',
   'CLOTHES',
-  'WASTE_SEPARATION'
-]
+  'WASTE_SEPARATION',
+];
 
 export const filterByCatagory = [
   'RUN',
@@ -54,7 +54,21 @@ export const filterByCatagory = [
   'MEETUP',
   'LEARN',
   'OUTDOOR',
-  'COMMUNITY'
+  'COMMUNITY',
+];
+export const typeOfState = [
+  {
+    value: 'POSTPONED',
+    name: 'POSTPONED',
+  },
+  {
+    value: 'CANCEL',
+    name: 'CANCEL',
+  },
+  {
+    value: 'ONGOING',
+    name: 'ONGOING',
+  },
 ];
 
 export const TypeOfShopCatagory = [
@@ -64,59 +78,50 @@ export const TypeOfShopCatagory = [
   'HEALTHCARE',
   'CLOTHES',
   'SPORTS',
-  'OTHERS'
+  'OTHERS',
 ];
 
-
-export const ShopRate = [
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-];
+export const ShopRate = [0, 1, 2, 3, 4, 5];
 
 export const TypeOfProducts = [
   {
     value: 'HOME',
-    name: 'HOME'
+    name: 'HOME',
   },
   {
     value: 'EATING',
-    name: 'EATING'
+    name: 'EATING',
   },
   {
     value: 'DRINKING',
-    name: 'DRINKING'
+    name: 'DRINKING',
   },
   {
     value: 'BAGS',
-    name: 'BAGS'
+    name: 'BAGS',
   },
   {
     value: 'BEAUTY',
-    name: 'BEAUTY'
+    name: 'BEAUTY',
   },
   {
     value: 'FOOD',
-    name: 'FOOD'
+    name: 'FOOD',
   },
   {
     value: 'BOOKS',
-    name: 'BOOKS'
+    name: 'BOOKS',
   },
   {
     value: 'EDUCATION',
-    name: 'EDUCATION'
+    name: 'EDUCATION',
   },
   {
     value: 'EVENT',
-    name: 'EVENT'
+    name: 'EVENT',
   },
   {
     value: 'OTHERS',
-    name: 'OTHERS'
+    name: 'OTHERS',
   },
-]
-
+];

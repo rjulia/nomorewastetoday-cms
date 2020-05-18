@@ -197,7 +197,6 @@ const FormCreateAdvice = (props) => {
                   date,
                   products,
                 };
-                console.log(input);
                 setAdvice({
                   variables: { input },
                 });
