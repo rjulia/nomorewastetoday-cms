@@ -16,7 +16,6 @@ const SweetAlert = withSwalInstance(swal);
 const SweetError = withSwalInstance(swal);
 
 const FormEditAdvice = (props) => {
-  console.log(props);
   const initialState = {
     advice: {
       id: props.advice.id,
@@ -96,7 +95,6 @@ const FormEditAdvice = (props) => {
         id: select.id,
       };
     });
-    console.log(idsObj);
     setValues({
       ...values,
       advice: {

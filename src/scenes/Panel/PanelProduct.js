@@ -19,7 +19,6 @@ const PanelProduct = ({ session, match }) => {
         {({ loading, error, data, refetch }) => {
           if (loading) return <Spinner color={'#18BC9C'} />;
           if (error) return `Error: ${error.message}`;
-          console.log(data);
           return <FormEditProduct refetch={refetch} session={session} product={data.getProduct} />;
         }}
       </Query>

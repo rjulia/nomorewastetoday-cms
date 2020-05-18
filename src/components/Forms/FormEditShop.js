@@ -134,7 +134,6 @@ const FormEditShop = (props) => {
             });
           }}
           onError={(error) => {
-            console.log(error);
             setValues({
               ...values,
               hasError: true,
@@ -190,7 +189,6 @@ const FormEditShop = (props) => {
                   plasticfree: Number(plasticfree),
                   category,
                 };
-                console.log(input);
                 uploadShop({
                   variables: { input },
                 });

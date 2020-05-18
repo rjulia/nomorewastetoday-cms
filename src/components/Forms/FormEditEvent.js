@@ -17,7 +17,7 @@ import { withSwalInstance } from 'sweetalert2-react';
 import swal from 'sweetalert2';
 import { UPDATE_EVENT } from '../../services/Mutations/index';
 import { Title, UploadCloud } from '../index';
-import { filterByCatagory } from '../../utils/Constants';
+import { filterByCatagory, typeOfState } from '../../utils/Constants';
 import './Forms.scss';
 
 const SweetAlert = withSwalInstance(swal);
@@ -66,6 +66,7 @@ function getStyles(name, TypeRecycling, theme) {
 }
 
 const FormEditEvent = (props) => {
+  console.log(props.event);
   const classes = useStyles();
   const theme = useTheme();
   const initialState = {
@@ -84,6 +85,7 @@ const FormEditEvent = (props) => {
       facebook: props.event.facebook || '',
       recomendations: props.event.recomendations || '',
       category: props.event.category || [],
+      stateEvent: props.event.stateEvent || '',
     },
     error: false,
     show: false,
@@ -106,6 +108,7 @@ const FormEditEvent = (props) => {
       category,
       facebook,
       recomendations,
+      stateEvent,
     },
     error,
   } = values;
@@ -151,6 +154,7 @@ const FormEditEvent = (props) => {
                     category,
                     facebook,
                     recomendations,
+                    stateEvent,
                   } = values.event;
 
                   setValues({
@@ -172,6 +176,7 @@ const FormEditEvent = (props) => {
                     category,
                     facebook,
                     recomendations,
+                    stateEvent,
                   };
 
                   uploadLocation({
@@ -372,7 +377,6 @@ const FormEditEvent = (props) => {
                         format="MM/dd/yyyy"
                         value={date}
                         onChange={(e) => {
-                          console.log(e);
                           setValues({
                             ...values,
                             event: {
@@ -421,6 +425,29 @@ const FormEditEvent = (props) => {
                               style={getStyles(name, filterByCatagory, theme)}
                             >
                               {name}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
+                    </div>
+                    <div className="form__input--box short">
+                      <FormControl className={'form__input form__input--select'}>
+                        <InputLabel htmlFor="category-simple">State of Event</InputLabel>
+                        <Select
+                          value={stateEvent}
+                          onChange={(e) =>
+                            setValues({
+                              ...values,
+                              event: {
+                                ...values.event,
+                                stateEvent: e.target.value,
+                              },
+                            })
+                          }
+                        >
+                          {typeOfState.map((stateE) => (
+                            <MenuItem key={stateE.value} value={stateE.value}>
+                              {stateE.name}
                             </MenuItem>
                           ))}
                         </Select>

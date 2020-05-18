@@ -89,6 +89,7 @@ export const EVENTS_QUERY = gql`
       title
       date
       category
+      stateEvent
     }
   }
 `;
@@ -111,6 +112,7 @@ export const EVENT_QUERY = gql`
       category
       facebook
       recomendations
+      stateEvent
     }
   }
 `;

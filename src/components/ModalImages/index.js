@@ -79,7 +79,6 @@ const ModalImages = () => {
   const { toggleMenu, isOpen, images } = useNabvar();
   const [copied, setCopied] = useState(false);
   const onCopy = (e) => {
-    console.log(e);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);

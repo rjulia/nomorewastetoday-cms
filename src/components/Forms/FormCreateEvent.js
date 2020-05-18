@@ -17,6 +17,7 @@ import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/picker
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Title, UploadCloud } from '../index';
 import { NEW_EVENT } from '../../services/Mutations/index';
+import { filterByCatagory, typeOfState } from '../../utils/Constants';
 import './Forms.scss';
 
 const SweetAlert = withSwalInstance(swal);
@@ -55,17 +56,6 @@ const MenuProps = {
   },
 };
 
-const filterByCatagory = [
-  'RUN',
-  'CHARITY',
-  'CLEAN',
-  'RECYCLE',
-  'MEETUP',
-  'LEARN',
-  'OUTDOOR',
-  'COMMUNITY',
-];
-
 function getStyles(name, filterByCatagory, theme) {
   return {
     fontWeight:
@@ -92,6 +82,7 @@ const FormCreateEvent = (props) => {
     facebook: '',
     recomendations: '',
     category: [],
+    stateEvent: '',
     message: '',
     error: false,
     empty: false,
@@ -165,6 +156,7 @@ const FormCreateEvent = (props) => {
                     facebook,
                     recomendations,
                     category,
+                    stateEvent,
                   } = state;
 
                   if (title === '' || place === '' || date === '') {
@@ -193,6 +185,7 @@ const FormCreateEvent = (props) => {
                     facebook,
                     recomendations,
                     category,
+                    stateEvent,
                   };
 
                   setEvent({
@@ -347,6 +340,25 @@ const FormCreateEvent = (props) => {
                               style={getStyles(name, filterByCatagory, theme)}
                             >
                               {name}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
+                    </div>
+                    <div className="form__input--box short">
+                      <FormControl className={'form__input form__input--select'}>
+                        <InputLabel htmlFor="category-simple">State of Event</InputLabel>
+                        <Select
+                          value={state.stateEvent}
+                          onChange={handleChange('stateEvent')}
+                          inputProps={{
+                            name: 'stateEvent',
+                            id: 'category-simple',
+                          }}
+                        >
+                          {typeOfState.map((stateE) => (
+                            <MenuItem key={stateE.value} value={stateE.value}>
+                              {stateE.name}
                             </MenuItem>
                           ))}
                         </Select>
