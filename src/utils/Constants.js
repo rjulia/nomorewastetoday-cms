@@ -72,11 +72,14 @@ export const typeOfState = [
 ];
 
 export const TypeOfShopCatagory = [
-  'FOOD',
+  'BABY',
   'CATERING',
-  'HOME',
-  'HEALTHCARE',
+  'CLEANING',
   'CLOTHES',
+  'COSMETICS',
+  'FOOD',
+  'HEALTHCARE',
+  'HOME',
   'SPORTS',
   'OTHERS',
 ];
